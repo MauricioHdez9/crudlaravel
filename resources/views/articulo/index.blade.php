@@ -1,8 +1,9 @@
 @extends('layouts.plantillabase');
 @section('contenido')
 <h1>vista Index</h1>
+     @csrf
 	<a href="articulos/create" class="btn btn-primary">crear</a>
-	<table class="table table-dark table-striped">
+		<table class="table table-dark table-striped">
 		<theard>
 			<tr>
 				<th scope="col">id</th>
