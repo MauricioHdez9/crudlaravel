@@ -1,4 +1,4 @@
-@extends('layauts.plantillabase')
+@extends('layouts.plantillabase')
 
 @section('contenido')
 <h2>editando</h2>
@@ -11,7 +11,7 @@
 	  </div>
 	  <div class="mb-3">
 		<label for="" class="form-label">Descripcion</label>
-		<input type="text"   name="descripcion" class="form-control" id="descripcion"value="{{$articulo->descripcio}}">		  </div>
+		<input type="text"   name="descripcion" class="form-control" id="descripcion"value="{{$articulo->descripcion}}">		  </div>
 	  <div class="mb-3">
 		<label for="" class="form-label">cantidad</label>
 		<input type="number"   name="catindad" class="form-control" id="catindad" value="{{$articulo->cantidad}}">
