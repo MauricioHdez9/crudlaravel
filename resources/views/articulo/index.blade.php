@@ -1,7 +1,7 @@
 @extends('layouts.plantillabase');
 @section('contenido')
 <h1>vista Index</h1>
-     @csrf
+     
 	<a href="articulos/create" class="btn btn-primary">crear</a>
 		<table class="table table-dark table-striped">
 		<theard>
@@ -23,8 +23,8 @@
 				<td>{{$articulo->descripcion}}</td>
 				<td>{{$articulo->cantidad}}</td>
 				<td>{{$articulo->precio}}</td>
-				<td><a href="">editar </a></td>
-				<button>eliminar </button>
+				<td><a href="/articulos/{{$articulo->id}}/edit"> editar </a><button>eliminar </button></td>
+				
 				
 			</tr>
 				
