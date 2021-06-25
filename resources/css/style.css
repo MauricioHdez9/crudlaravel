@@ -1,0 +1,25 @@
+:root
+{
+	--primary:#111854;
+	--light:#ffff;
+	--grey:#efefef;
+}
+body
+{
+	overflow:hidden;
+	font-family:"muli",sans-serif;
+	font-weight:300;
+	color: var(--primay);
+}
+#sidebar-container
+{
+	min-height: 100vh;
+}
+#sidebar-container .logo
+{
+	padding: .875rem  1.25rem;
+}
+#sidebar-container .menu
+{
+	width:18rem;
+}

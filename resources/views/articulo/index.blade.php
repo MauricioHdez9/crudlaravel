@@ -1,7 +1,8 @@
 @extends('layouts.plantillabase')
 @section('css')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
-	
+<link rel="stylesheet" href="/css/admin_custom.css">
+<link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
 @endsection
 @section('contenido')
 <h1>vista Index</h1>
@@ -32,7 +33,7 @@
 						<a href="/articulos/{{$articulo->id}}/edit"> editar </a>
 						@csrf
 						@method('DELETE')
-						<button>eliminar </button>	
+						<button>eliminar</button>	
 					</form>
 
 				</td>
@@ -46,15 +47,16 @@
 		</tbody>
 	  </table>
 	  @section('js')
-		  <script src="https://code.jquery.com/jquery-3.5.1.js"><script>
-		  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"><script>
-		  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"><script>
+	  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+	  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
 			
 		  <script>
 
 			$(document).ready(function()
-			{
-				$('#articulos').DataTable();
+			{ $('#articulos').DataTable({
+					"lengthMenu": [[5,10, 50, -1], [5, 10, 50, "All"]]
+				});
 			});
 			
 		  <script>
