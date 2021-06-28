@@ -21,3 +21,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     // return Inertia\Inertia::render('Dash');
     return view('/dash.index') ;
 })->name('dash');
+Route::get('/pig/vista7',function ()
+{
+    return view('/pig.vista7');
+}); 

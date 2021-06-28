@@ -13,7 +13,7 @@ body
 }
 #sidebar-container
 {
-	min-height: 100vh;
+	min-height:100vh;
 }
 #sidebar-container .logo
 {
@@ -22,4 +22,21 @@ body
 #sidebar-container .menu
 {
 	width:18rem;
+	
+}
+.bg-primary
+{
+	background-color: var(--primary) !important;
+}
+ a:hover
+
+ {
+	 text-decoration: none; 
+	 ;
+}
+a
+
+ {
+	 text-decoration: none; 
+	 
 }
