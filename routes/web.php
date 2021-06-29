@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () 
+{
     return view('welcome');
 });
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
@@ -25,3 +26,5 @@ Route::get('/pig/vista7',function ()
 {
     return view('/pig.vista7');
 }); 
+Route::get('/pig.vista2','usuariosController@index');
+
