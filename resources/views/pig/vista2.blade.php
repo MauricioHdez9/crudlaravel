@@ -4,7 +4,8 @@
 @endsection
 @section('contenidopvistax')
  
-    <div>contenido extra </div>
+    <div>contenido extra </div> 
+
 @endsection
 @section('footer')
 prueva en los escrips 

@@ -6,5 +6,9 @@ use Illuminate\Http\Request;
 
 class logintabla extends Controller
 {
-    //
+    public function index()
+    {
+
+
+    }
 }

@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () 
-{
-    return view('welcome');
-});
+// Route::get('/', function () 
+// {
+//     return view('welcome');
+// });
+Route::resource('/','App\Http\Controllers\UserController');
+//Route::resource('/','App\Http\Controllers\PersonaController');//PRUEBA
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
@@ -51,5 +53,7 @@ Route::get('/pig/vista2',function()
 {
     return view('/pig.vista2');
 }); 
-Route::get('/pig.vista2','usuariosController@index');
+
+
+
 
