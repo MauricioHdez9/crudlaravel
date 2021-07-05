@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () 
-// {
-//     return view('welcome');
-// });
-Route::resource('/','App\Http\Controllers\UserController');
+Route::get('/', function () 
+{
+    return view('welcome');
+});
+// Route::resource('/','App\Http\Controllers\UserController');
 //Route::resource('/','App\Http\Controllers\PersonaController');//PRUEBA
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
 
@@ -52,7 +52,7 @@ Route::get('/pig/vista3',function ()
 Route::get('/pig/vista2',function()
 {
     return view('/pig.vista2');
-}); 
+})->name('vista2');
 
 
 

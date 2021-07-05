@@ -53,17 +53,6 @@ class CreateContratosTable extends Migration
             $table->string('kam');
             $table->string('kad');
             $table->string('cg');//comentarios generales 
-
-            
-
-
-
-            
-            
-
-
-
-
             $table->timestamps();
         });
     }

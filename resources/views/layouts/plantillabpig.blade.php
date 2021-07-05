@@ -58,12 +58,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-9">
-                  <h1 class="font-weight-bold">bienvenido </h1>
-                  <p class="lead text-ruted">revisalainformacion</p>
-                </div>
-                <div class="col-lg-3">
-                  <button class="btn btn-primary">descarga</button>
-                </div>
+                  
               </div>
             </div>
           </section>
