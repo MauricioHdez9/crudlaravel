@@ -11,6 +11,7 @@
             nombres <br>
             <input type="text" name="nombres" value="{{old('nombres')}}">
         </label>
+        {!! $errors->first('name','<small>:message</small><br>') !!}
         <br>
         <label for="">
             apellido paterno<br>

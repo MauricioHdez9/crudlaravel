@@ -15,14 +15,14 @@ class CreateContratosTable extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
-            $table->string('razon')();//rozon social 
+            $table->string('razon');//rozon social 
             $table->string('alias')->nullable();//
             $table->string('gp')->nullable();   //grupo
-            $table->int('ncliente');//numero de cliente
+            $table->string('ncliente');//numero de cliente
             $table->string('sr');       //subregion 
             $table->string('escliente');//estado del cliente
             $table->string('mtc')->nullable();//motivo de cancelacion
-            $table->string('ncliente');//numero del cliente
+            $table->string('ncon');    //numero de contrato
             $table->dateTime('ffc');   //fecha de firma de contrato
             $table->dateTime('fic');   //fecha de inicio de cobro 
             $table->string('tp');      //tipo de programa 
@@ -43,13 +43,13 @@ class CreateContratosTable extends Migration
             $table->dateTime('feterco');//fecha de terminacion de contrato 
             $table->boolean('ajprein');//ajuste de precio por inflacion 
             $table->dateTime('feajuin')->nullable();//fecha del primer ajuste 
-            $table->int('perajin')->nullable();//Periodicidad del ajuste 
+            $table->string('perajin')->nullable();//Periodicidad del ajuste 
             $table->boolean('ajpreprod');//Ajuste de precio por productividad
             $table->dateTime('fepajprod')->nullable();//Fecha del primer ajuste
-            $table->int('peajprod')->nullable();//Periodicidad del ajuste
+            $table->string('peajprod')->nullable();//Periodicidad del ajuste
             $table->boolean('ajpreco'); //Ajuste de precio por contrato
             $table->dateTime('fepajpre')->nullable();//Fecha del primer ajuste
-            $table->int('perajpre')->nullable();//Periodicidad del ajuste
+            $table->string('perajpre')->nullable();//Periodicidad del ajuste
             $table->string('kam');
             $table->string('kad');
             $table->string('cg');//comentarios generales 

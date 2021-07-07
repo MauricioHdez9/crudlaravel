@@ -20,7 +20,13 @@ Route::get('/', function ()
 // Route::resource('/','App\Http\Controllers\UserController');
 //Route::resource('/','App\Http\Controllers\PersonaController');//PRUEBA
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
-
+// Route::get('/pig/vista3',function ()
+// {
+//     return view('/pig.vista3');
+// })->name('vista3');
+Route::resource('pig/vista3','App\Http\Controllers\UsuariosController');
+Route::get('pig/vista3','App\Http\Controllers\UsuariosController@store');
+ 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     // return Inertia\Inertia::render('Dash');
     return view('/dash.index') ;
@@ -45,10 +51,7 @@ Route::get('/pig/vista4',function ()
 {
     return view('/pig.vista4');
 });
-Route::get('/pig/vista3',function ()
-{
-    return view('/pig.vista3');
-}); 
+
 Route::get('/pig/vista2',function()
 {
     return view('/pig.vista2');
