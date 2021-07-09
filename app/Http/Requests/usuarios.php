@@ -29,10 +29,10 @@ class usuarios extends FormRequest
             'app'     => 'requiered',
             'apm'     => 'requiered',
             'email'   => 'requiered|email',
-            'nivela'  => 'requiered'
-            'kam'     => 'requiered' 
-            'username'=> 'requiered'
-            'password'=> 'requiered'
+            'nivelda'  => 'requiered',
+            'kam'     => 'requiered',
+            'username'=> 'requiered',
+            'password'=> 'requiered',
             
         ];
     }

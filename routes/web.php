@@ -20,13 +20,13 @@ Route::get('/', function ()
 // Route::resource('/','App\Http\Controllers\UserController');
 //Route::resource('/','App\Http\Controllers\PersonaController');//PRUEBA
 Route::resource('articulos','App\Http\Controllers\ArticuloController');
-// Route::get('/pig/vista3',function ()
-// {
-//     return view('/pig.vista3');
-// })->name('vista3');
-Route::resource('pig/vista3','App\Http\Controllers\UsuariosController');
-Route::get('pig/vista3','App\Http\Controllers\UsuariosController@store');
- 
+Route::get('/pig/vista3',function ()
+{
+    return view('/pig.vista3');
+})->name('vista3');
+// Route::get('pig/vista3','App\Http\Controllers\UsuariosController@store');// no funciona 
+Route::resource('pig/vista2','App\Http\Controllers\UsuariosController');
+// Route::get('pig/vista3','App\Http\Controllers\UsuariosController');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     // return Inertia\Inertia::render('Dash');
     return view('/dash.index') ;

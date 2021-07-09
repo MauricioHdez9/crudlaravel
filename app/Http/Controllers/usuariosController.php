@@ -27,7 +27,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,7 +36,7 @@ class UsuariosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(usuarios $request)
+    public function store(Request $request)
     {
         // $validatedData = $request->validate([
         //     'country_name' => 'required|max:255',
@@ -44,7 +44,34 @@ class UsuariosController extends Controller
         //     'cases' => 'required|numeric',
         // ]);
         // $show = Corona::create($validatedData);
-       
+
+        // $validatedData = $request->validate
+        // ([
+
+        //     'nombres' => 'requiered',
+        //     'app'     => 'requiered',
+        //     'apm'     => 'requiered',
+        //     'email'   => 'requiered|email',
+        //     'nivelda' => 'requiered',
+        //     'kam'     => 'requiered',
+        //     'username'=> 'requiered',
+        //     'password'=> 'requiered',
+        //  ]);
+        
+
+        $usuario = new Usuario();
+        $usuario ->nombres  = $request->get('nombres');
+        $usuario ->app      = $request->get('app');
+        $usuario ->apm      = $request->get('apm');
+        $usuario ->email    = $request->get('email');
+        $usuario ->nivelda  = $request->get('nivelda');
+        $usuario ->kam      = $request->get('kam');
+        $usuario ->username = $request->get('username');
+        $usuario ->password = $request->get('password');
+
+        $usuarios->save();
+
+        return redirect('/pig/vista3');
         
     }
 
