@@ -17,7 +17,7 @@ class UsuariosController extends Controller
     {
     
         $usuarios = Usuario::all();
-        return view('pig.vista3')->with('usuarios',$usuarios);
+        return view('pig.usuarios.index')->with('usuarios',$usuarios);
     }
 
     /**
@@ -27,8 +27,9 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        
+        return view('pig.usuarios.create');
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -59,19 +60,20 @@ class UsuariosController extends Controller
         //  ]);
         
 
-        $usuario = new Usuario();
-        $usuario ->nombres  = $request->get('nombres');
-        $usuario ->app      = $request->get('app');
-        $usuario ->apm      = $request->get('apm');
-        $usuario ->email    = $request->get('email');
-        $usuario ->nivelda  = $request->get('nivelda');
-        $usuario ->kam      = $request->get('kam');
-        $usuario ->username = $request->get('username');
-        $usuario ->password = $request->get('password');
+        $usuarios = new Usuario();
+        $usuarios->nombres   = $request->get('nombres');
+        $usuarios->app       = $request->get('app');
+        $usuarios->apm       = $request->get('apm');
+        $usuarios->email     = $request->get('email');
+        $usuarios->nivelda   = $request->get('nivelda');
+        $usuarios->kam       = $request->get('kam');
+        $usuarios->username  = $request->get('username');
+        $usuarios->password  = $request->get('password');
+        $usuarios->vpassword = $request->get('vpassword');
 
         $usuarios->save();
 
-        return redirect('/pig/vista3');
+        return redirect('/usuarios');
         
     }
 

@@ -16,14 +16,15 @@ class CreateUsuariosTable extends Migration
         Schema::create('usuarios', function (Blueprint $table)
         {
             $table->id();
-            $table->string('nombres');
-            $table->string('app');
-            $table->string('apm');
-            $table->string('email');
-            $table->string('nivelda');
-            $table->string('kam');
-            $table->string('username');
-            $table->string('password');
+            $table->string ('nombres');
+            $table->string ('app');
+            $table->string ('apm');
+            $table->string ('email');
+            $table->string ('nivelda');
+            $table->string ('kam');
+            $table->string ('username');
+            $table->string ('password');
+            $table->string ('vpassword');
             $table->timestamps();
         });
     }

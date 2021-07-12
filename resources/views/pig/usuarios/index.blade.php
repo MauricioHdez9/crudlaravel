@@ -13,11 +13,12 @@
             <th scope="col">nombre</th>
             <th scope="col">app</th>
             <th scope="col">apm</th>
+            <th scope="col">nivelda</th>
             <th scope="col">email</th>
-            <th scope="col">nivelA</th>
             <th scope="col">kam</th>
             <th scope="col">username</th>
             <th scope="col">password</th>
+            <th scope="col">vpassword</th>
             
 
         </tr>
@@ -30,10 +31,12 @@
             <td>{{$usuario->nombres}}</td>
             <td>{{$usuario->app}}</td>
             <td>{{$usuario->apm}}</td>
+            <td>{{$usuario->nivelda}}</td>
             <td>{{$usuario->email}}</td>
             <td>{{$usuario->kam}}</td>
             <td>{{$usuario->username}}</td>
             <td>{{$usuario->password}}</td>
+            <td>{{$usuario->vpassword}}</td>
             
             
         </tr>

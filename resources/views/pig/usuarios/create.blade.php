@@ -5,7 +5,7 @@
 @section('contenidopvistax')
  
     <div>contenido extra </div>
-    <form method="POST" action="{{route('vista2')}}"> 
+    <form method="POST" action="/usuarios"> 
         @csrf
         <label for="">
             nombres <br>
