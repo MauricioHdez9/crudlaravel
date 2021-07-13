@@ -19,8 +19,9 @@ Route::get('/', function ()
 });
 // Route::resource('/','App\Http\Controllers\UserController');
 //Route::resource('/','App\Http\Controllers\PersonaController');//PRUEBA
-Route::resource('articulos','App\Http\Controllers\ArticuloController');
-Route::resource('usuarios','App\Http\Controllers\UsuariosController');
+Route::resource('articulos' ,'App\Http\Controllers\ArticuloController');
+Route::resource('usuarios'  ,'App\Http\Controllers\UsuariosController');
+Route::resource('contratos' ,'App\Http\Controllers\ContratosController');
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController@store');// no funciona 
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController');
 
@@ -30,29 +31,27 @@ Route::get('/pig/vista7',function ()
     return view('/pig.vista7');
 });
 
-Route::get('/pig/vista6',function ()
-{
-    return view('/pig.vista6');
-});
+// Route::get('/contratos',function ()
+// {
+//     return view('/pig.vista6');
+// });
 
-Route::get('/pig/vista5',function ()
-{
-    return view('/pig.vista5');
-});
 
-Route::get('/pig/vista4',function ()
-{
-    return view('/pig.vista4');
-});
-Route::get('/pig/index',function ()
-{
-    return view('pig.usuarios.index');
-})->name('index');
+
+// Route::get('/pig/contrato/index',function ()
+// {
+//     return view('contratoindex');
+// });
+// Route::get('/pig/contratos/index',function ()
+// {
+//     return view('pig.usuarios.index');
+// })->name('index');
 
 Route::get('pig/usuario/create',function()
 {
     return view('pig.usuarios.create ');
 })->name('vista2');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     // return Inertia\Inertia::render('Dash');
     return view('/dash.index') ;
