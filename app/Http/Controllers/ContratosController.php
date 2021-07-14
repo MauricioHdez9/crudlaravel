@@ -25,7 +25,7 @@ class ContratosController extends Controller
      */
     public function create()
     {
-     
+      return  view ('pig.contratos.create');
     }
 
     /**
@@ -36,7 +36,48 @@ class ContratosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contratos = new Contrato();
+        $contratos ->razon     = request->get('razon');
+        $contratos ->alias     = request->get('alias');
+        $contratos ->gp        = request->get('gs');
+        $contratos ->ncliente  = request->get('ncliente');
+        $contratos ->escliente = request->get('escliente');
+        $contratos ->mtc = request->get('mtc');
+        $contratos ->ncon = request->get('ncon');
+        $contratos ->ffc = request->get('ffc');
+        $contratos ->fic = request->get('fic');
+        $contratos ->tp = request->get('tp');
+        $contratos ->sai = request->get('sai');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+        $contratos ->sr = request->get('sr');
+
+
+
     }
 
     /**

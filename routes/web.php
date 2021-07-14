@@ -26,10 +26,10 @@ Route::resource('contratos' ,'App\Http\Controllers\ContratosController');
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController');
 
 
-Route::get('/pig/vista7',function ()
+Route::get('/contratos/create',function ()
 {
-    return view('/pig.vista7');
-});
+    return view('pig.contratos.create');
+})->name('createco');
 
 // Route::get('/contratos',function ()
 // {
@@ -47,10 +47,10 @@ Route::get('/pig/vista7',function ()
 //     return view('pig.usuarios.index');
 // })->name('index');
 
-Route::get('pig/usuario/create',function()
-{
-    return view('pig.usuarios.create ');
-})->name('vista2');
+// Route::get('pig/usuario/create',function()
+// {
+//     return view('pig.usuarios.create ');
+// })->name('vista2');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dash', function () {
     // return Inertia\Inertia::render('Dash');

@@ -5,7 +5,7 @@
 @section('contenidopvistax')
  
     <div>contenido extra </div>
-    <form method="POST" action="{{route('vista2')}}"> 
+    <form method="POST" action="{{route('createco')}}"> 
         @csrf
            
         <label for="">
@@ -151,7 +151,7 @@
          </label>
          {!! $errors->first('codicon','<small>:message</small><br>') !!}
 
-           ajpreco | fepajpre | perajpre | kam | kad | cg
+           
  
          <label for="">
             otro<br>
