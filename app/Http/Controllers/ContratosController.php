@@ -36,47 +36,49 @@ class ContratosController extends Controller
      */
     public function store(Request $request)
     {
+        
         $contratos = new Contrato();
-        $contratos ->razon     = request->get('razon');
-        $contratos ->alias     = request->get('alias');
-        $contratos ->gp        = request->get('gs');
-        $contratos ->ncliente  = request->get('ncliente');
-        $contratos ->escliente = request->get('escliente');
-        $contratos ->mtc = request->get('mtc');
-        $contratos ->ncon = request->get('ncon');
-        $contratos ->ffc = request->get('ffc');
-        $contratos ->fic = request->get('fic');
-        $contratos ->tp = request->get('tp');
-        $contratos ->sai = request->get('sai');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-        $contratos ->sr = request->get('sr');
-
-
+        $contratos-> razon     = $request->get('razon');
+        $contratos-> alias     = $request->get('alias');
+        $contratos-> gp        = $request->get('gp');
+        $contratos-> ncliente  = $request->get('ncliente');
+        $contratos-> sr        = $request->get('sr');
+        $contratos-> escliente = $request->get('escliente');
+        $contratos-> mtc       = $request->get('mtc');
+        $contratos-> ncon      = $request->get('ncon');
+        $contratos-> ffc       = $request->get('ffc');
+        $contratos-> fic       = $request->get('fic');
+        $contratos-> tp        = $request->get('tp');
+        $contratos-> mc        = $request->get('mc');
+        $contratos-> sai       = $request->get('sai');
+        $contratos-> ff        = $request->get('ff');
+        $contratos-> pp        = $request->get('pp');
+        $contratos-> linkc     = $request->get('linkc');
+        $contratos-> linkca    = $request->get('linkca');
+        $contratos-> ra        = $request->get('ra');
+        $contratos-> cofe      = $request->get('cofe');
+        $contratos-> ca        = $request->get('ca');
+        $contratos-> prog      = $request->get('prog');
+        $contratos-> antiso    = $request->get('antiso');
+        $contratos-> codicon   = $request->get('codicon');
+        $contratos-> otro      = $request->get('otro');
+        $contratos-> duco      = $request->get('duco');
+        $contratos-> feterco   = $request->get('feterco');
+        $contratos-> ajprein   = $request->get('ajprein');
+        $contratos-> feajuin   = $request->get('feajuin');
+        $contratos-> perajin   = $request->get('perajin');
+        $contratos-> ajpreprod = $request->get('ajpreprod');
+        $contratos-> fepajprod = $request->get('fepajprod');
+        $contratos-> peajprod  = $request->get('peajprod');
+        $contratos-> ajpreco   = $request->get('ajpreco');
+        $contratos-> fepajpre  = $request->get('fepajpre');
+        $contratos-> perajpre  = $request->get('perajpre');
+        $contratos-> kam       = $request->get('kam');
+        $contratos-> kad       = $request->get('kad');
+        $contratos-> cg       = $request->get('cg');
+        $contratos->save();
+        
+        return redirect('/articulos');
 
     }
 

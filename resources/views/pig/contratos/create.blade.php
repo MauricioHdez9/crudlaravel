@@ -5,7 +5,8 @@
 @section('contenidopvistax')
  
     <div>contenido extra </div>
-    <form method="POST" action="{{route('createco')}}"> 
+    <form method="POST" action="/contratos"> 
+
         @csrf
            
         <label for="">
@@ -90,9 +91,9 @@
 
          <label for="">
              ff <br>
-             <input type="text" name=" ff " value="{{old(' ff ')}}">   
+             <input type="text" name="ff" value="{{old('ff')}}">   
          </label>
-         {!! $errors->first(' ff ','<small>:message</small><br>') !!}
+         {!! $errors->first('ff','<small>:message</small><br>') !!}
 
          <label for="">
             pp<br>
@@ -179,9 +180,16 @@
 
          <label for="">
             feajuin <br>
-             <input type="text" name=" feajuin" value="{{old(' feajuin')}}">   
+             <input type="text" name="feajuin" value="{{old('feajuin')}}">   
          </label>
-         {!! $errors->first(' feajuin','<small>:message</small><br>') !!}
+         {!! $errors->first('feajuin','<small>:message</small><br>') !!}
+
+         <label for="">
+            perajin <br>
+             <input type="text" name="perajin" value="{{old('perajin')}}">   
+         </label>
+         {!! $errors->first('perajin','<small>:message</small><br>') !!}
+
 
          <label for="">
            ajpreprod<br>
@@ -195,11 +203,11 @@
          </label>
          {!! $errors->first('fepajprod','<small>:message</small><br>') !!}
          <label for="">
-            fepajprod<br>
-             <input type="text" name="fepajprod" value="{{old('fepajprod')}}">   
+            peajprod<br>
+             <input type="text" name="peajprod" value="{{old('peajprod')}}">   
          </label>
-         {!! $errors->first('fepajprod','<small>:message</small><br>') !!}
-         {!! $errors->first('fepajprod','<small>:message</small><br>') !!}
+         {!! $errors->first('peajprod','<small>:message</small><br>') !!}
+         
          <label for="">
              ajpreco<br>
              <input type="text" name=" ajpreco" value="{{old(' ajpreco')}}">   
@@ -225,7 +233,7 @@
          {!! $errors->first('kam','<small>:message</small><br>') !!}
          <label for="">
             kad <br>
-             <input type="text" name="" value="{{old('')}}">   
+             <input type="text" name="kad" value="{{old('kad')}}">   
          </label>
          {!! $errors->first('','<small>:message</small><br>') !!}
 

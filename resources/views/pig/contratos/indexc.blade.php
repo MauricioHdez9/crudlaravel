@@ -10,6 +10,8 @@
             <tr>
                 <th scope="col">id</th>
                 <th scope="col">rozon social </th>
+                <th scope="col">alias </th>
+                <th scope="col">grupo </th>
                 <th scope="col">numero de cliente </th>
                 <th scope="col">subregion </th>
                 <th scope="col">estado del cliente</th>
@@ -88,7 +90,8 @@
                 <td>{{$contrato->perajpre}}</td>
                 <td>{{$contrato->kam}}</td>
                 <td>{{$contrato->kad}}</td>
-                <td>{{$contrato->cg}}</td>
+                
+                
                
             </tr>
                 
