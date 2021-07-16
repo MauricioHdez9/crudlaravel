@@ -2,6 +2,11 @@
 @section('headerdatos')
     <link rel="stylesheet" href="referencia randum"> 
 @endsection
+@section('navmas')
+@section('navmas')
+<li><a class="dropdown-item" href="#funciona con agregar contratos ">agregar contrato</a></li>
+@endsection
+@endsection
 @section('contenidopvistax')
  
     <div>contenido extra </div>

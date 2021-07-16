@@ -101,7 +101,10 @@ class ContratosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contrato  = Contrato::find($id);
+        return view('contratos.edit')->with('contraro',$contratos);
+
+
     }
 
     /**

@@ -2,6 +2,9 @@
 @section('headerdatos')
     <link rel="stylesheet" href="referencia randum"> 
 @endsection
+@section('navmas')
+    <li><a class="dropdown-item" href="#funciona ">agregar a usuario</a></li>
+@endsection
 @section('contenidopvistax')
  
     <div>contenido extra </div>
@@ -37,6 +40,15 @@
             <td>{{$usuario->username}}</td>
             <td>{{$usuario->password}}</td>
             <td>{{$usuario->vpassword}}</td>
+            <td>
+                <form action="{{ route('usuarios.destroy',$usuario->id)}}" method="POST">
+                    <a href="/usuarios/{{$usuario->id}}/edit"> editar </a>
+                    @csrf
+                    @method('DELETE')
+                    <button>eliminar</button>	
+                </form>
+
+            </td>
             
             
         </tr>

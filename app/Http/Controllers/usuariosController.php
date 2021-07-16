@@ -96,7 +96,8 @@ class UsuariosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        return view('pig/usuarios/edit')->with('usuario',$usuario);
     }
 
     /**
