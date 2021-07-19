@@ -97,7 +97,7 @@ class UsuariosController extends Controller
     public function edit($id)
     {
         $usuario = Usuario::find($id);
-        return view('pig/usuarios/edit')->with('usuario',$usuario);
+        return view('pig.usuarios.edit')->with('usuario',$usuario);
     }
 
     /**
@@ -109,7 +109,19 @@ class UsuariosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->nombres   = $request->get('nombres');
+        $usuario->app       = $request->get('app');
+        $usuario->apm       = $request->get('apm');
+        $usuario->email     = $request->get('email');
+        $usuario->nivelda   = $request->get('nivelda');
+        $usuario->kam       = $request->get('kam');
+        $usuario->username  = $request->get('username');
+        $usuario->password  = $request->get('password');
+        $usuario->vpassword = $request->get('vpassword');
+        $usuario->save();
+
+        return redirect('/usuarios');
     }
 
     /**
@@ -120,6 +132,9 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->delete();
+        return redirect('/usuarios');
+
     }
 }

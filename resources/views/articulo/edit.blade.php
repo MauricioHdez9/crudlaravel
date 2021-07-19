@@ -11,7 +11,8 @@
 	  </div>
 	  <div class="mb-3">
 		<label for="" class="form-label">Descripcion</label>
-		<input type="text"   name="descripcion" class="form-control" id="descripcion"value="{{$articulo->descripcion}}">		  </div>
+		<input type="text"   name="descripcion" class="form-control" id="descripcion"value="{{$articulo->descripcion}}">
+	  </div>
 	  <div class="mb-3">
 		<label for="" class="form-label">cantidad</label>
 		<input type="number"   name="catindad" class="form-control" id="catindad" value="{{$articulo->cantidad}}">
@@ -21,7 +22,7 @@
 		<input type="number" name="precio" class="form-control" id="precio" value="{{$articulo->precio}}" >
 		
 	  </div>
-	  <a href="/articulos" class="btn btn-secondary" >cancelar</a>
+	  <a href="/usuarios" class="btn btn-secondary" >cancelar</a>
 		<button type="submit" class="btn btn-primary">guardar</button>
 	
 </form>

@@ -6,8 +6,9 @@
 @section('contenidopvistax')
  
     <div>contenido extra </div>
-    <form method="POST" action="/usuarios"> 
-        @csrf
+    <form  action="/usuarios/{{$usuario->id}}" method="POST"> 
+        @csrf 
+        @method('PUT')
         <label for="">
             nombres <br>
             <input type="text" name="nombres" value="{{$usuario->nombres}}">

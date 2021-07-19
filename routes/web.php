@@ -26,10 +26,7 @@ Route::resource('contratos' ,'App\Http\Controllers\ContratosController');
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController');
 
 
-Route::get('/contratos/create',function ()
-{
-    return view('pig.contratos.create');
-})->name('createco');
+
 
 // Route::get('/contratos',function ()
 // {

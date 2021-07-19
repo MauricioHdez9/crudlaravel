@@ -14,7 +14,7 @@ class ContratosController extends Controller
     public function index()
     {
         $contratos = Contrato::all();
-        return view ('pig/contratos/indexc')->with('contratos',$contratos);
+        return view ('pig/contratos/index')->with('contratos',$contratos);
          
     }
 
@@ -78,7 +78,7 @@ class ContratosController extends Controller
         $contratos-> cg       = $request->get('cg');
         $contratos->save();
         
-        return redirect('/articulos');
+        return redirect('/contratos');
 
     }
 
@@ -101,8 +101,8 @@ class ContratosController extends Controller
      */
     public function edit($id)
     {
-        $contrato  = Contrato::find($id);
-        return view('contratos.edit')->with('contraro',$contratos);
+        $contrato= Contrato::find($id);
+        return view('pig.contratos.edit')->with('contrato',$contrato);
 
 
     }
@@ -116,7 +116,49 @@ class ContratosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $contrato= Contrato::find($id);
+        $contrato-> razon     = $request->get('razon');
+        $contrato-> alias     = $request->get('alias');
+        $contrato-> gp        = $request->get('gp');
+        $contrato-> ncliente  = $request->get('ncliente');
+        $contrato-> sr        = $request->get('sr');
+        $contrato-> escliente = $request->get('escliente');
+        $contrato-> mtc       = $request->get('mtc');
+        $contrato-> ncon      = $request->get('ncon');
+        $contrato-> ffc       = $request->get('ffc');
+        $contrato-> fic       = $request->get('fic');
+        $contrato-> tp        = $request->get('tp');
+        $contrato-> mc        = $request->get('mc');
+        $contrato-> sai       = $request->get('sai');
+        $contrato-> ff        = $request->get('ff');
+        $contrato-> pp        = $request->get('pp');
+        $contrato-> linkc     = $request->get('linkc');
+        $contrato-> linkca    = $request->get('linkca');
+        $contrato-> ra        = $request->get('ra');
+        $contrato-> cofe      = $request->get('cofe');
+        $contrato-> ca        = $request->get('ca');
+        $contrato-> prog      = $request->get('prog');
+        $contrato-> antiso    = $request->get('antiso');
+        $contrato-> codicon   = $request->get('codicon');
+        $contrato-> otro      = $request->get('otro');
+        $contrato-> duco      = $request->get('duco');
+        $contrato-> feterco   = $request->get('feterco');
+        $contrato-> ajprein   = $request->get('ajprein');
+        $contrato-> feajuin   = $request->get('feajuin');
+        $contrato-> perajin   = $request->get('perajin');
+        $contrato-> ajpreprod = $request->get('ajpreprod');
+        $contrato-> fepajprod = $request->get('fepajprod');
+        $contrato-> peajprod  = $request->get('peajprod');
+        $contrato-> ajpreco   = $request->get('ajpreco');
+        $contrato-> fepajpre  = $request->get('fepajpre');
+        $contrato-> perajpre  = $request->get('perajpre');
+        $contrato-> kam       = $request->get('kam');
+        $contrato-> kad       = $request->get('kad');
+        $contrato-> cg       = $request->get('cg');
+        $contrato->save();
+
+        return redirect('/contractos');
+
     }
 
     /**
@@ -127,6 +169,8 @@ class ContratosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contrato = Contrato::find($id);
+        $contrato->delete();
+        return redirect('/contratos');
     }
 }
