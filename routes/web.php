@@ -24,6 +24,10 @@ Route::resource('usuarios'  ,'App\Http\Controllers\UsuariosController');
 Route::resource('contratos' ,'App\Http\Controllers\ContratosController');
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController@store');// no funciona 
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController');
+Route::get('/notificaciones',function()
+{
+    return view('notificaciones');
+})->name('notificaciones');
 
 
 

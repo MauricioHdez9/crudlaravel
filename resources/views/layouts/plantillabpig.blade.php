@@ -22,7 +22,7 @@
 			  
         <div class="menu">
           <a href="" class="d-block text-light p-3"> <i class="icon ion-md-apps mr-2  lead">  </i>  indicadores </a>
-          <a href="" class="d-block text-light p-3"> <i class="icon ion-md-card mr-2  lead">  </i>  Notificaciones</a>
+          <a href="{{route('notificaciones')}}" class="d-block text-light p-3"> <i class="icon ion-md-card mr-2  lead">  </i>  Notificaciones</a>
           <a href="" class="d-block text-light p-3"> <i class="icon ion-md-today mr-2 lead"> </i>  contratos</a>
         </div>
 		</div>
