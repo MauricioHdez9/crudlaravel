@@ -2,6 +2,7 @@
 @section('headerdatos')
     <link rel="stylesheet" href="referencia randum"> 
 @endsection
+@section('titulo','usuarios')
 @section('navmas')
     <li><a class="dropdown-item" href="#funciona ">agregar a usuario</a></li>
 @endsection

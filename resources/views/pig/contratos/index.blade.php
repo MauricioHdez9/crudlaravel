@@ -2,6 +2,7 @@
 @section('headerdatos')
     <link rel="stylesheet" href="{{asset('css\stylecontratos.css')}}"> 
 @endsection
+@section('titulo','contratos')
 @section('navmas')
 @section('navmas')
 <li><a class="dropdown-item" href="#funciona con agregar contratos ">agregar contrato</a></li>

@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css\style.css')}}">
     @yield('headerdatos')
-    <title>dashbord</title>
+    <title> @yield('titulo','pig')</title>
   </head> 
   
   <body>
@@ -22,8 +22,8 @@
 			  
         <div class="menu">
           <a href="" class="d-block text-light p-3"> <i class="icon ion-md-apps mr-2  lead">  </i>  indicadores </a>
-          <a href="{{route('notificaciones')}}" class="d-block text-light p-3"> <i class="icon ion-md-card mr-2  lead">  </i>  Notificaciones</a>
-          <a href="" class="d-block text-light p-3"> <i class="icon ion-md-today mr-2 lead"> </i>  contratos</a>
+          <a href="/notificaciones" class="d-block text-light p-3"> <i class="icon ion-md-card mr-2  lead">  </i>  Notificaciones</a>
+          <a href="/contratos" class="d-block text-light p-3"> <i class="icon ion-md-today mr-2 lead"> </i>  contratos</a>
         </div>
 		</div>
 

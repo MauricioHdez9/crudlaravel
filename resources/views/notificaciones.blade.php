@@ -2,6 +2,8 @@
 @section('headerdatos')
     <link rel="stylesheet" href="referencia randum"> 
 @endsection
+@section('titulo','notificaciones')
+
 @section('contenidopvistax')
  
     <div>contenido extra </div>
@@ -38,30 +40,30 @@
 
 		</tbody>
 	  </table>
-	  {{-- <table>
+	  <table class="barra table table-dark table-striped">
 		  <theard>
 			<th scope="col">fecha de terminacion de contrato </th>
-			<th scope="col">ajuste de precio por inflacion</th>
-			<th scope="col">fecha del primer ajuste </th>
+			<th scope="col">estatus</th>
+			<th scope="col">respuesta del kam</th>
+			<th scope="col">color</th>
+			
 		  </theard>
 		  <tbody>
 			@foreach ($contratos as $contrato) 
 			 
 			<tr>
 				<td>{{$contrato->feterco}}</td>
-				<td>{{$contrato->ajprein}}</td>
-				<td>{{$contrato->ajpreprod}}</td>
-				<td>{{$contrato->ncliente}}</td>
-				<td>{{$contrato->ra}}</td>
-				<td>{{$contrato->kam}}</td>
-			 
+				<th scope="col">estatus3</th>
+				<th scope="col">hacer el eviado de correo</th>
+				<th scope="col">color </th>
+					 
 			</tr>
 			
 			@endforeach
 
 
 		  </tbody>
-	  </table> --}}
+	  </table>
 @endsection
 @section('footer')
 prueva en los escrips 

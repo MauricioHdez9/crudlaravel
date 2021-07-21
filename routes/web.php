@@ -19,15 +19,16 @@ Route::get('/', function ()
 });
 // Route::resource('/','App\Http\Controllers\UserController');
 //Route::resource('/','App\Http\Controllers\PersonaController');//PRUEBA
-Route::resource('articulos' ,'App\Http\Controllers\ArticuloController');
-Route::resource('usuarios'  ,'App\Http\Controllers\UsuariosController');
-Route::resource('contratos' ,'App\Http\Controllers\ContratosController');
+Route::resource('articulos','App\Http\Controllers\ArticuloController');
+Route::resource('usuarios' ,'App\Http\Controllers\UsuariosController');
+Route::resource('contratos','App\Http\Controllers\ContratosController');
+Route::resource('notificaciones','App\Http\Controllers\NotificacionesController');
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController@store');// no funciona 
 // Route::get('pig/vista3','App\Http\Controllers\UsuariosController');
-Route::get('/notificaciones',function()
-{
-    return view('notificaciones');
-})->name('notificaciones');
+// Route::get('/notificaciones',function()
+// {
+//     return view('notificaciones');
+// })->name('notificaciones');
 
 
 
