@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Mail\NotificacionMallable;
+use Illuminate\Support\Facades\Mail;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,10 +37,13 @@ Route::resource('notificaciones','App\Http\Controllers\NotificacionesController'
 
 
 
-// Route::get('/contratos',function ()
-// {
-//     return view('/pig.vista6');
-// });
+Route::get('/nofvencimiento',function ()
+{
+    $correo = new NotificacionMallable;
+    Mail::to('mauhedezpar@gmail.com')->send($correo);
+    return ('mesaje enviado ');
+    
+});
 
 
 

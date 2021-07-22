@@ -5,10 +5,10 @@
 @section('contenidopvistax')
  
     <div>contenido extra </div>
-    <form method="POST" action="/contratos"> 
+    <form method="POST" action="/contratos/{{$contrato->id}}"> 
 
         @csrf
-           
+        @method('PUT')  
         <label for="">
             razon <br>
             <input type="text" name="razon" value="{{$contrato->razon}}">
@@ -244,8 +244,8 @@
          {!! $errors->first('cg','<small>:message</small><br>') !!}
          
          
-        <button>guardar</button>
-        <button type="submit">eliminar</button>
+        <button>cancelar </button>
+        <button type="submit">guardar</button>
     </form> 
 @endsection
 @section('footer')
