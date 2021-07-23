@@ -74,6 +74,9 @@
                     <td>{{$contrato->mtc}}</td>
                     <td>{{$contrato->ncon}}</td>
                     <td>{{$contrato->ffc}}</td>
+                    {{-- @if () --}}
+                        
+                    @endif
                     <td>{{$contrato->fic}}</td>
                     <td>{{$contrato->tp}}</td>
                     <td>{{$contrato->mc}}</td>

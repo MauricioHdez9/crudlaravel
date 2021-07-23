@@ -15,7 +15,11 @@ class CreateCarerrasTable extends Migration
     {
         Schema::create('carerras', function (Blueprint $table) {
             $table->id();
+            $table->string('code');
+            $table->string('name');
+            $table->int('facultad_id');
             $table->timestamps();
+            
         });
     }
 
