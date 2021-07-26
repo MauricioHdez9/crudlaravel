@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\telefono;
 use Illuminate\Http\Request;
 use App\Models\User;
+
 
 class UserController extends Controller
 {
@@ -14,8 +16,19 @@ class UserController extends Controller
      */
     public function index()
     {
-        $datos = User::all();
-        echo $datos;
+        // $datos = User::all();
+        // echo $datos;
+        $telefono = new telefono();
+        $telefono->telefono ='53221312324';
+        $user = new User();
+        $user->name="jenifer4";
+        $user->email="jenife4@gmail.com";
+        $user->password= encrypt('ser');
+        $user->save();
+        // $user->$telefono->save();// no funciona 
+        $user->telefono()->save($telefono);
+        return 'se creo los el contenido de la relacion uno a uno';
+
         
     }
 
@@ -48,7 +61,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $telefono = User::find($id)->telefono;
+        return $telefono;
     }
 
     /**

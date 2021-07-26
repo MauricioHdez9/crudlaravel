@@ -17,7 +17,7 @@ class CreateCarerrasTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name');
-            $table->int('facultad_id');
+            $table->bigInteger('facultad_id');
             $table->timestamps();
             
         });

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 use App\Mail\NotificacionMallable;
@@ -33,7 +35,13 @@ Route::resource('notificaciones','App\Http\Controllers\NotificacionesController'
 // {
 //     return view('notificaciones');
 // })->name('notificaciones');
+ 
 
+Route::get('/add-post',[PostController::class,'addpost']);
+Route::get('/addcomment/{id}',[PostController::class,'addComment']);
+Route::get('/getcomment/{id}',[PostController::class,'getcomments']);
+Route::get('/addrole',[RoleController::class,'addRole']);
+Route::get('/adduser',[RoleController::class,'adduser']);
 
 
 

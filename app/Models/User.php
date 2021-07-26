@@ -58,4 +58,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function telefono()
+    {
+        // return $this->hasOne('App\Models\telefono');
+        return $this->hasOne(Telefono::class);
+    }
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class,'role_users');
+    }
 }
