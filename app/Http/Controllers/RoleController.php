@@ -34,4 +34,17 @@ class RoleController extends Controller
        $user->roles()->attach($roleid);
        return "los usuarios se crearon ";
    }
+   public function getAllRolesByUser($id)
+   {
+       $user  = User::find($id);
+       $roles = $user->roles;
+       printf("los datos son ",$roles);
+       return $roles; 
+   }
+   public function  getAllUsersByRole($id)
+   {
+       $role = Role::find($id);
+       $users = $role->users;
+       return $users;
+   }
 }

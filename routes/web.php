@@ -5,6 +5,7 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 use App\Mail\NotificacionMallable;
+use App\Models\Post;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -42,6 +43,9 @@ Route::get('/addcomment/{id}',[PostController::class,'addComment']);
 Route::get('/getcomment/{id}',[PostController::class,'getcomments']);
 Route::get('/addrole',[RoleController::class,'addRole']);
 Route::get('/adduser',[RoleController::class,'adduser']);
+Route::get('/rolesdeusuarios/{id}',[RoleController::class,'getAllRolesByUser']);
+Route::get('/usuariosconroles/{id}',[RoleController::class,'getAllUsersByRole']);
+Route::get('/posts',[PostController::class,'index']);
 
 
 
