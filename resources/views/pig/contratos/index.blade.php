@@ -78,6 +78,7 @@
                     <td>{{$contrato->fic}}</td>
                     <td>{{$contrato->tp}}</td>
                     <td>{{$contrato->mc}}</td>
+                    
                     <td>{{$contrato->sai}}</td>
                     <td>{{$contrato->ff}}</td>
                     <td>{{$contrato->pp}}</td>

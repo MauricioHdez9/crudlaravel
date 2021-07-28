@@ -39,7 +39,7 @@ class CreateContratosTable extends Migration
             $table->boolean('antiso');          //anticorrucion y soborno 
             $table->boolean('codicon');         //codigos de conducta
             $table->string('otro')->nullable(); //
-            $table->string('duco');             //duracon de contrato
+            $table->string('duco');             //duracion de contrato
             $table->dateTime('feterco');        //fecha de terminacion de contrato 
             $table->boolean ('ajprein');         //ajuste de precio por inflacion 
             $table->dateTime('feajuin')->nullable();    //fecha del primer ajuste 
