@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Contrato;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -19,9 +20,11 @@ class NotificacionMallable extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $contratos;
+
+    public function __construct(Contrato $contratos)
     {
-        //
+        $this->contratos = $contratos;
     }
 
     /**
@@ -30,7 +33,14 @@ class NotificacionMallable extends Mailable
      * @return $this
      */
     public function build()
+
     {
-        return $this->view('email.nofvencimiento');
+         $contratos = Contrato::all();
+         return $this->view('email.nofvencimiento')
+         ->with([
+         'razon'   => $this->contratos->razon,
+         'numeroco'=> $this->contratos->ncon,
+         'fechat ' => $this->contratos->feterco]);
+        // ->with('contratos',$contratos);
     }
 }

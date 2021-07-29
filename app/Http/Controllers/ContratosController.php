@@ -154,7 +154,7 @@ class ContratosController extends Controller
         $contrato-> perajpre  = $request->get('perajpre');
         $contrato-> kam       = $request->get('kam');
         $contrato-> kad       = $request->get('kad');
-        $contrato-> cg       = $request->get('cg');
+        $contrato-> cg        = $request->get('cg');
         $contrato->save();
 
         return redirect('/contractos');
