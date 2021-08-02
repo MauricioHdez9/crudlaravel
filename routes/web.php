@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mailcontroller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
@@ -49,13 +50,13 @@ Route::get('/posts',[PostController::class,'index']);
 
 
 
-Route::get('/nofvencimiento',function ()
-{
-    $correo = new NotificacionMallable;
-    Mail::to('mauhedezpar@gmail.com')->send($correo);
-    return ('mesaje enviado ');
+Route::get('/nofvencimiento',[mailcontroller::class,'send']);
+// {
+//     // $correo = new NotificacionMallable;
+//     // Mail::to('mauhedezpar@gmail.com')->send($correo);
+//     // return ('mesaje enviado ');
     
-});
+// });
 
 
 

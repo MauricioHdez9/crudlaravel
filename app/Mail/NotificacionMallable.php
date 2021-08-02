@@ -20,11 +20,12 @@ class NotificacionMallable extends Mailable
      *
      * @return void
      */
-    public $contratos;
-
-    public function __construct(Contrato $contratos)
+    // public $details;
+       public $contrato;
+    public function __construct(Contrato $contrato)
     {
-        $this->contratos = $contratos;
+        // $this->details = $details;
+           $this->contrato = $contrato;
     }
 
     /**
@@ -35,12 +36,13 @@ class NotificacionMallable extends Mailable
     public function build()
 
     {
-         $contratos = Contrato::all();
-         return $this->view('email.nofvencimiento')
-         ->with([
-         'razon'   => $this->contratos->razon,
-         'numeroco'=> $this->contratos->ncon,
-         'fechat ' => $this->contratos->feterco]);
+        //  $contratos = Contrato::all();
+         return $this->view('email.nofvencimiento');
+            // return $this->subject(' no se que haga esto  email.nofvencimiento')->view('email.nofvencimiento');
+        //  ->with([
+        //  'razon'   => $this->contratos->razon,
+        //  'numeroco'=> $this->contratos->ncon,
+        //  'fechat ' => $this->contratos->feterco]);
         // ->with('contratos',$contratos);
     }
 }

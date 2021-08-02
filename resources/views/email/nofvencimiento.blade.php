@@ -11,6 +11,8 @@
 	VENCIMIENTO DE CONTRATO <br>
 	El contrato (número de contrato) de (razón social del <br>
 	cliente) vencerá el (fecha de término de contrato). <br>
+	<h1>{{$details["title"]}}</h1>
+	<h2>{{$details["body"]}}</h2>
 		<div class="barra2">
 			<table id="usuarios" class="barra table table-dark table-striped">
 				<theard>
@@ -25,7 +27,7 @@
 					</tr>
 				</theard>
 				<tbody>
-					@foreach ($contratos as $contrato) 
+					{{-- @foreach ($contratos as $contrato) 
 					 
 					<tr>
 						<td>{{$contrato->id}}</td>
@@ -35,7 +37,7 @@
 					</tr>
 					
 					@endforeach
-					
+					 --}}
 	
 				</tbody>
 			  </table>
@@ -49,9 +51,9 @@
 				5. PROCESO DE FIRMA: En proceso de firma <br>
 				6. OTRO <br>
 				7. FINALIZADO <br>
-				hola:{{$contratoss->contratos->razon}}
+				{{-- hola:{{$contratoss->contratos->razon}} --}}
 				<div>
-					hola2:{{$razon}}
+					{{-- hola2:{{$razon}} --}}
 				</div>
 				
 		{{-- <form  action="/usuarios/{{$usuario->id}}" method="POST">

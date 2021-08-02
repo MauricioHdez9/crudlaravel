@@ -11,10 +11,17 @@ class ContratosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function tiempo()
+    { 
+        
+        $contratos = Contrato::where("estado","=",1)->select("id","feterco")->paginate(10);
+        return view ('pig/contratos/tiempo')->with('contratos',$contratos);
+    }
     public function index()
     {
         $contratos = Contrato::all();
         return view ('pig/contratos/index')->with('contratos',$contratos);
+        
          
     }
 
@@ -103,6 +110,7 @@ class ContratosController extends Controller
     {
         $contrato= Contrato::find($id);
         return view('pig.contratos.edit')->with('contrato',$contrato);
+        
 
 
     }
